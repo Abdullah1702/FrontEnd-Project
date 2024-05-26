@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.header{
+    height: 10%;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    padding-bottom: 0%;
+}
+
+.navBar{
+    max-width: 1100px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333333;
+}
+
+.logo img{
+    width: 30px;
+    height: 30px;
+}
+
+.nav{
+    gap: 1rem;
+    display: none;
+    overflow: hidden;
+
+}
+
+@media screen and (min-width: 840px){
+    .nav{
+        display: flex;
+    }
+}
+
+.navText{
+    color: #718096;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition-property: all;
+    transition-duration: 0.1s;
+}
+
+.navText:hover{
+    color: rgb(88, 88, 219);
+}
+
+.navButton{
+    display: none;
+    background-color: rgb(86, 86, 224);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+}
+
+@media screen and (min-width: 840px){
+    .navButton{
+        display: block;
+    }
+}
+
+.navButton:hover{
+    background-color: rgb(43, 43, 225);
+}
+
+.navButton:active{
+    box-shadow: 2px 2px 5px blue;
+    transform: scale(1.1);
+}
+
+.navButton a{
+    color: white;
+    font-weight: 600;
+}
+
+.menuButton{
+    display: none;
+}
+
+@media screen and (max-width: 840px) {
+    .menuButton{
+        display: block;
+        border: none;
+        background-color: white;
+        cursor: pointer;
+    }
+    .menuButton:hover{
+        background-color: #dcdbdb;
+        border-radius: 5px;
+    }
+    .nav.responsive {position: relative;}
+    
+    .nav.responsive ul {
+        float: none;
+        display: block;
+        text-align: left;
+  }
+
+}
+
+.menu-icon{
+    height: 1.5rem;
+    width: 1.5rem;
+}
