@@ -256,3 +256,40 @@ body{
         width: 420px;
     }
 }
+
+
+.info{
+    width: 100%;
+    height: fit-content;
+    margin: 0 auto;
+    margin: 2rem 0;
+    animation: slideFromLeft ease 1s forwards;
+}
+
+.info h2{
+    text-align: center;
+}
+
+.social{
+    width: 40%;
+    background-color: #e1e6ee;
+    padding: 1.5rem 1rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 120px));
+    justify-content: center;
+    row-gap: 1rem;
+}
+
+/* S */
+
+.logos{
+    display: flex;
+    gap: 5px;
+}
+
+.logos img{
+    height: 20px;
+    width: 20px;
+}
