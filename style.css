@@ -293,3 +293,132 @@ body{
     height: 20px;
     width: 20px;
 }
+
+
+.feature-container{
+    width: 100%;
+    height: fit-content;
+    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+    padding: 1rem 0rem;
+}
+
+.content-main{
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    perspective: 1000px;
+    animation: slideFromLeft1 1.5s ease forwards;
+    /* animation-timeline: scroll(); */
+    opacity: 0;
+
+}
+
+.feature-text{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+}
+
+.card-container{
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    transform: rotate3d(0.5, -1, 0, 15deg) rotate(-1deg) scale(0.9);    
+}
+
+
+@keyframes slideFromLeft1 {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .card-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+}
+
+
+
+.cards{
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px black;
+}
+
+
+.cards:hover::before{
+    left: 0%; 
+    
+}
+
+.cards::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    background-color: rgba(0,0,0,0.5);
+    transition: all 2s linear ;
+}
+
+.cards img{
+    height: 20px;
+    width: 20px; 
+}
+
+.feature-img{
+    border-radius: 50px;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards:nth-child(1){
+    background-color: rgb(49, 49, 255);
+}
+
+.cards:nth-child(2){
+    background-color: rgb(255, 91, 91);
+}
+
+.cards:nth-child(3){
+    background-color: rgb(255, 172, 17);
+}
+
+.cards:nth-child(4){
+    background-color: rgb(0, 183, 183);
+}
+
+.cards:nth-child(5){
+    background-color: rgb(0, 167, 111);
+}
+
+.cards.cards:nth-child(6){
+    background-color: rgb(91, 42, 91);
+}
